@@ -13,7 +13,7 @@ import{LitElement,css,html,SharedStyles,store,PageViewElement}from"./my-app.js";
         <video id="player" controls autoplay></video>
         
         <button id="capture" @click="${this._capture}" title="Capture">Capture</button>
-    `}firstUpdated(){const player=this.shadowRoot.getElementById("player"),captureButton=this.shadowRoot.getElementById("capture"),constraints={video:!0};navigator.mediaDevices.getUserMedia(constraints).then(stream=>{player.srcObject=stream})}_capture(){const player=this.shadowRoot.getElementById("player");store.dispatch(capture(player))}}window.customElements.define("camera-capture",CameraCapture);class CameraViewer extends LitElement{static get styles(){return[SharedStyles,css`
+    `}firstUpdated(){const player=this.shadowRoot.getElementById("player"),captureButton=this.shadowRoot.getElementById("capture"),constraints={video:{facingMode:{exact:"environment"}}};navigator.mediaDevices.enumerateDevices().then(inputDevices=>{inputDevices.forEach(device=>{console.log(device)})});navigator.mediaDevices.getUserMedia(constraints).then(stream=>{player.srcObject=stream})}_capture(){const player=this.shadowRoot.getElementById("player");store.dispatch(capture(player))}}window.customElements.define("camera-capture",CameraCapture);class CameraViewer extends LitElement{static get styles(){return[SharedStyles,css`
         :host {
             width: 100vw;
             height: 100vh;  
