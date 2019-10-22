@@ -42,7 +42,10 @@ return[SharedStyles,css`
 
             
         </div>        
-    `}firstUpdated(){const player=this.shadowRoot.getElementById("player"),captureButton=this.shadowRoot.getElementById("capture"),constraints={video:!0};navigator.mediaDevices.getUserMedia(constraints).then(stream=>{player.srcObject=stream})}_capture(){const player=this.shadowRoot.getElementById("player");store.dispatch(capture(player))}}window.customElements.define("camera-capture",CameraCapture);class CameraViewer extends LitElement{static get styles(){return[SharedStyles,css`
+    `}firstUpdated(){const player=this.shadowRoot.getElementById("player"),captureButton=this.shadowRoot.getElementById("capture"),constraints={video:{facingMode:{exact:"environment"}}};//   const constraints = {
+//     video: true
+//   };
+navigator.mediaDevices.getUserMedia(constraints).then(stream=>{player.srcObject=stream})}_capture(){const player=this.shadowRoot.getElementById("player");store.dispatch(capture(player))}}window.customElements.define("camera-capture",CameraCapture);class CameraViewer extends LitElement{static get styles(){return[SharedStyles,css`
         :host {
             width: 100vw;
             height: 100vh;  
