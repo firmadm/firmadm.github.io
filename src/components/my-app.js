@@ -9325,7 +9325,8 @@ return html$1`
         <my-view404 class="page" ?active="${"view404"===this._page}"></my-view404>
       </main>
 
-      <footer>
+      <!-- hide footer when camera is open-->
+      <footer ?hidden="${"view1"===this._page}">
         <p>Made with &hearts; by the Polymer team.</p>
       </footer>
 
