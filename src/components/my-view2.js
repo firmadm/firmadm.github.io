@@ -1,3 +1,4 @@
+import { LitElement, css, html, plusIcon, minusIcon, ButtonSharedStyles, PageViewElement, connect, store, SharedStyles } from './my-app.js';
 /**
 @license
 Copyright (c) 2018 The Polymer Project Authors. All rights reserved.
@@ -7,22 +8,120 @@ The complete set of contributors may be found at http://polymer.github.io/CONTRI
 Code distributed by Google as part of the polymer project is also
 subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
 */
-import { html } from "../../node_modules/lit-element/lit-element.js";
-import { PageViewElement } from './page-view-element.js';
-import { connect } from "../../node_modules/pwa-helpers/connect-mixin.js"; // This element is connected to the Redux store.
 
-import { store } from '../store.js'; // These are the actions needed by this element.
+const INCREMENT = 'INCREMENT';
+const DECREMENT = 'DECREMENT';
 
-import { increment, decrement } from '../actions/counter.js'; // We are lazy loading its reducer.
+const increment = () => {
+  return {
+    type: INCREMENT
+  };
+};
 
-import counter from '../reducers/counter.js';
+const decrement = () => {
+  return {
+    type: DECREMENT
+  };
+};
+
+var counter = {
+  INCREMENT: INCREMENT,
+  DECREMENT: DECREMENT,
+  increment: increment,
+  decrement: decrement
+}; // imagine that it could just as well be a third-party element that you
+// got from someone else.
+
+class CounterElement extends LitElement {
+  static get properties() {
+    return {
+      /* The total number of clicks you've done. */
+      clicks: {
+        type: Number
+      },
+
+      /* The current value of the counter. */
+      value: {
+        type: Number
+      }
+    };
+  }
+
+  static get styles() {
+    return [ButtonSharedStyles, css`
+        span {
+          width: 20px;
+          display: inline-block;
+          text-align: center;
+          font-weight: bold;
+        }
+      `];
+  }
+
+  render() {
+    return html`
+      <div>
+        <p>
+          Clicked: <span>${this.clicks}</span> times.
+          Value is <span>${this.value}</span>.
+          <button @click="${this._onIncrement}" title="Add 1">${plusIcon}</button>
+          <button @click="${this._onDecrement}" title="Minus 1">${minusIcon}</button>
+        </p>
+      </div>
+    `;
+  }
+
+  constructor() {
+    super();
+    this.clicks = 0;
+    this.value = 0;
+  }
+
+  _onIncrement() {
+    this.value++;
+    this.clicks++;
+    this.dispatchEvent(new CustomEvent('counter-incremented'));
+  }
+
+  _onDecrement() {
+    this.value--;
+    this.clicks++;
+    this.dispatchEvent(new CustomEvent('counter-decremented'));
+  }
+
+}
+
+window.customElements.define('counter-element', CounterElement);
+const INITIAL_STATE = {
+  clicks: 0,
+  value: 0
+};
+
+const counter$1 = (state = INITIAL_STATE, action) => {
+  switch (action.type) {
+    case INCREMENT:
+      return {
+        clicks: state.clicks + 1,
+        value: state.value + 1
+      };
+
+    case DECREMENT:
+      return {
+        clicks: state.clicks + 1,
+        value: state.value - 1
+      };
+
+    default:
+      return state;
+  }
+};
+
+var counter$2 = {
+  'default': counter$1
+};
 store.addReducers({
-  counter
+  counter: counter$1
 }); // These are the elements needed by this element.
-
-import './counter-element.js'; // These are the shared styles needed by this element.
-
-import { SharedStyles } from './shared-styles.js';
 
 class MyView2 extends connect(store)(PageViewElement) {
   static get properties() {
@@ -84,3 +183,4 @@ class MyView2 extends connect(store)(PageViewElement) {
 }
 
 window.customElements.define('my-view2', MyView2);
+export { counter as $counter, counter$2 as $counter$1, counter$1 as $counterDefault, DECREMENT, INCREMENT, decrement, increment };
