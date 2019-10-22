@@ -30,7 +30,9 @@ return[SharedStyles,css`
                 }
                 
             `]}render(){return html`
-        <link rel="stylesheet" href="../../fonts/fontawesome/css/all.css">
+    
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+        <!-- <link rel="stylesheet" href="../../fonts/fontawesome/css/all.css"> -->
     
         <div id="video_box">
         <video id="player" autoplay></video>
