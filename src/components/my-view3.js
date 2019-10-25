@@ -1,4 +1,4 @@
-import { LitElement, html, css, PageViewElement, connect, store, addToCartIcon, removeFromCartIcon, ButtonSharedStyles, SharedStyles } from './my-app.js';
+import { LitElement, html$2 as html, css, PageViewElement, connect, store, addToCartIcon, removeFromCartIcon, ButtonSharedStyles, SharedStyles } from './my-app.js';
 
 function defaultEqualityCheck(a, b) {
   return a === b;

@@ -1,4 +1,4 @@
-import { html, PageViewElement, SharedStyles } from './my-app.js';
+import { html$2 as html, PageViewElement, SharedStyles } from './my-app.js';
 
 class MyView404 extends PageViewElement {
   static get styles() {

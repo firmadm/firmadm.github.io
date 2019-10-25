@@ -1,4 +1,4 @@
-import { LitElement, css, html, plusIcon, minusIcon, ButtonSharedStyles, PageViewElement, connect, store, SharedStyles } from './my-app.js';
+import { LitElement, css, html$2 as html, plusIcon, minusIcon, ButtonSharedStyles, PageViewElement, connect, store, SharedStyles } from './my-app.js';
 /**
 @license
 Copyright (c) 2018 The Polymer Project Authors. All rights reserved.

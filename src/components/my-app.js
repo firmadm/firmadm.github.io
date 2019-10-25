@@ -9468,6 +9468,72 @@ store.addReducers({app:app$1});var store$1={store:store};const menuIcon=html$1`<
           --app-drawer-background-color: var(--app-secondary-color);
           --app-drawer-text-color: var(--app-light-text-color);
           --app-drawer-selected-color: #78909C;
+
+          /* Custom for firmadm below */
+          --input-marker-color:		#FFA500;
+          --input-marker-focus-color:	#FFA500;
+          --shadow-color:				#B2B2B2;
+        
+          /* From theme below */
+          --dark-primary-color:       #455A64;
+          --default-primary-color:    #000000;
+          --light-primary-color:      #CFD8DC;
+          --light-secondary-color:    #f9f9f9;
+          --text-primary-color:       #FFFFFF;
+          --accent-color:             #FFA500;
+          
+          
+          --primary-background-color: #FFFFFF;
+          --primary-text-color:       #212121;
+          --secondary-text-color:     #727272;
+          --disabled-text-color:      #BDBDBD;
+          --divider-color:            #B6B6B6;
+          --primary-middle-color:		#A9A9A9;
+        
+          --success-color:			#7e9e7f;
+          --success-color-light:		#b0d1b1;
+          --fail-color:				#FF5900;
+          --error-color:				#FF5900;
+          --error-color-light:		#ff9d5b;
+          --warning-color:			#FFC500;
+        
+          --black-color:				#000000;
+          --white-color:				#FFFFFF;
+        
+          --main-menu-background-color:			#292c2f;
+          --main-menu-selected-background-color:	#434649;
+          --main-menu-selected-background-color:	#434649;
+          --main-menu-not-selected-color:			#f9f9f9;
+          --main-menu-selected-color:				#FFFFFF;
+          --main-menu-header-background-color:	#000000;
+        
+        /*
+          --input-marker-color:		#f0ae36;
+          --input-marker-focus-color:	#f0ae36;
+          --shadow-color:				#B2B2B2;
+        
+          
+          --dark-primary-color:       #455A64;
+          --default-primary-color:    #5687bb;
+          --light-primary-color:      #d5e7fb;
+          --light-secondary-color:    #f9f9f9;
+          --text-primary-color:       #FFFFFF;
+          --accent-color:             #f0ae36;
+          
+          --primary-background-color: #FFFFFF;
+          --primary-text-color:       #212121;
+          --secondary-text-color:     #727272;
+          --disabled-text-color:      #BDBDBD;
+          --divider-color:            #B6B6B6;
+        
+          --success-color:			#7e9e7f;
+          --fail-color:				#FF7B40;
+          --error-color:				#b85712;
+          --warning-color:			#b85712;*/
+        
+        
+        
+
         }
 
         app-header {
@@ -9486,12 +9552,9 @@ store.addReducers({app:app$1});var store$1={store:store};const menuIcon=html$1`<
         }
 
         [main-title] {
-          font-family: 'Pacifico';
-          text-transform: lowercase;
+          font-family: 'Arial';
+          font-weight: 800;
           font-size: 30px;
-          /* In the narrow layout, the toolbar is offset by the width of the
-          drawer button, and the text looks not centered. Add a padding to
-          match that button */
           padding-right: 44px;
         }
 
@@ -9587,6 +9650,7 @@ store.addReducers({app:app$1});var store$1={store:store};const menuIcon=html$1`<
           [main-title] {
             padding-right: 0px;
           }
+
         }
       `];}render(){// Anything that's related to rendering should be done in here.
 return html$1`
@@ -9594,7 +9658,10 @@ return html$1`
       <app-header condenses reveals effects="waterfall">
         <app-toolbar class="toolbar-top">
           <button class="menu-btn" title="Menu" @click="${this._menuButtonClicked}">${menuIcon}</button>
-          <div main-title>${this.appTitle}</div>
+          <div main-title><span style="color: #000000;">firm</span><span  style="color: #FFA500;">Adm</span>JOHANM2</div>
+
+          <camera-capture><camera-capture>
+          
         </app-toolbar>
 
         <!-- This gets hidden on a small screen-->
@@ -9681,4 +9748,4 @@ shouldUpdate(){return this.active;}static get properties(){return{active:{type:B
     font-size: 30px;
     line-height: 64px;
   }
-`;var sharedStyles={SharedStyles:SharedStyles};export{app as $app,app$2 as $app$1,app$1 as $appDefault,appLayoutBehavior as $appLayoutBehavior,appScrollEffectsBehavior as $appScrollEffectsBehavior,applyShim as $applyShim$1,ApplyShim as $applyShimDefault,applyShimUtils as $applyShimUtils,arraySelector as $arraySelector,arraySplice as $arraySplice,async as $async,buttonSharedStyles as $buttonSharedStyles,caseMap$1 as $caseMap,_class as $class,commonRegex as $commonRegex,commonUtils as $commonUtils,connectMixin as $connectMixin,cssParse as $cssParse,cssTag as $cssTag,customStyle as $customStyle,customStyleInterface as $customStyleInterface$1,CustomStyleInterface as $customStyleInterfaceDefault,debounce as $debounce,decorators as $decorators,defaultTemplateProcessor$1 as $defaultTemplateProcessor,dirMixin as $dirMixin,directive$1 as $directive,documentWait$1 as $documentWait,documentWait as $documentWaitDefault,dom$1 as $dom,domBind as $domBind,domIf as $domIf,domModule as $domModule,domRepeat as $domRepeat,elementMixin as $elementMixin,flattenedNodesObserver as $flattenedNodesObserver,flush$2 as $flush,gestureEventListeners as $gestureEventListeners,gestures$1 as $gestures,helpers as $helpers,hideTemplateControls as $hideTemplateControls,htmlTag as $htmlTag,index as $index,index$1 as $index$1,thunk as $indexDefault,result as $indexDefault$1,ironResizableBehavior as $ironResizableBehavior,ironScrollTargetBehavior as $ironScrollTargetBehavior,lazyReducerEnhancer$1 as $lazyReducerEnhancer,legacyElementMixin as $legacyElementMixin,litElement as $litElement,litHtml as $litHtml,mediaQuery as $mediaQuery,metadata as $metadata,mixin as $mixin,modifyTemplate as $modifyTemplate,mutableData as $mutableData,mutableDataBehavior as $mutableDataBehavior,myIcons as $myIcons,network as $network,pageViewElement as $pageViewElement,part as $part,parts as $parts,path as $path,polymer_dom as $polymerDom,polymerElement as $polymerElement,polymerFn as $polymerFn,polymerLegacy as $polymerLegacy,ponyfill as $ponyfill,symbolObservablePonyfill as $ponyfillDefault,propertiesChanged as $propertiesChanged,propertiesMixin as $propertiesMixin,propertyAccessors as $propertyAccessors,propertyEffects as $propertyEffects,redux as $redux,render$1 as $render,renderStatus as $renderStatus,resolveUrl$1 as $resolveUrl,router as $router,scopeSubtree$1 as $scopeSubtree,settings as $settings,shadyRender as $shadyRender,sharedStyles as $sharedStyles,store$1 as $store,styleGather as $styleGather,styleSettings as $styleSettings,styleUtil as $styleUtil,telemetry as $telemetry,template$1 as $template,templateFactory$1 as $templateFactory,templateInstance as $templateInstance,templateMap$1 as $templateMap,templateMap as $templateMapDefault,templateResult as $templateResult,templateStamp as $templateStamp,templatize$1 as $templatize,templatizerBehavior as $templatizerBehavior,unscopedStyleHandler as $unscopedStyleHandler,updatingElement as $updatingElement,wrap$2 as $wrap,ANIMATION_MATCH,AppLayoutBehavior,AppScrollEffectsBehavior,ArraySelector,ArraySelectorMixin,AttributeCommitter,AttributeCommitter as AttributeCommitter$1,AttributePart,AttributePart as AttributePart$1,BRACKETED,Base,BooleanAttributePart,BooleanAttributePart as BooleanAttributePart$1,ButtonSharedStyles,CLOSE_SNACKBAR,CSSResult,CSSResult as CSSResult$1,Class,CustomStyle,CustomStyleInterfaceInterface,CustomStyleProvider,Debouncer,DefaultTemplateProcessor,DefaultTemplateProcessor as DefaultTemplateProcessor$1,DirMixin,DomApi,DomBind,DomIf,DomModule,DomRepeat,ElementMixin,ElementWithBackground,EventApi,EventPart,EventPart as EventPart$1,FlattenedNodesObserver,GestureEventListeners,HOST_PREFIX,HOST_SUFFIX,IS_VAR,IronResizableBehavior,IronScrollTargetBehavior,LegacyElementMixin,LitElement,MEDIA_MATCH,MIXIN_MATCH,MutableData,MutableDataBehavior,NodePart,NodePart as NodePart$1,OPEN_SNACKBAR,OptionalMutableData,OptionalMutableDataBehavior,PageViewElement,Polymer,Polymer as Polymer$1,PolymerElement,PropertiesChanged,PropertiesMixin,PropertyAccessors,PropertyCommitter,PropertyCommitter as PropertyCommitter$1,PropertyEffects,PropertyPart,PropertyPart as PropertyPart$1,SVGTemplateResult,SVGTemplateResult as SVGTemplateResult$1,SVGTemplateResult as SVGTemplateResult$2,SharedStyles,StyleNode,Template,Template as Template$1,TemplateInstance,TemplateInstance as TemplateInstance$1,TemplateInstanceBase,TemplateResult,TemplateResult as TemplateResult$1,TemplateResult as TemplateResult$2,TemplateResult as TemplateResult$3,TemplateStamp,Templatizer,UPDATE_DRAWER_STATE,UPDATE_OFFLINE,UPDATE_PAGE,UpdatingElement,UpdatingElement as UpdatingElement$1,VAR_ASSIGN,VAR_CONSUMED,ActionTypes as __DO_NOT_USE__ActionTypes,_scrollEffects,_scrollTimer,add,enqueueDebouncer as addDebouncer,addListener,addToCartIcon,afterNextRender,allowTemplateFromDomModule,animationFrame,applyCss,applyMiddleware,applyStyle,applyStylePlaceHolder,beforeNextRender,bindActionCreators,boundAttributeSuffix,calculateSplices,camelToDashCase,cancelSyntheticClickEvents,combineReducers,compose,connect,createMarker,createMarker as createMarker$1,createScopeStyle,createStore,css,css as css$1,cssBuild,cssFromModule,cssFromModuleImports,cssFromModules,cssFromTemplate,customElement,customElement as customElement$1,dashToCamelCase,dedupingMixin,deepTargetFind,defaultConverter,defaultConverter as defaultConverter$1,defaultTemplateProcessor,defaultTemplateProcessor as defaultTemplateProcessor$1,detectMixin,directive,directive as directive$1,disableRuntime,dom,dumpRegistrations,elementHasBuiltCss,elementsAreInvalid,enqueueDebouncer,enqueueDebouncer as enqueueDebouncer$1,eventOptions,eventOptions as eventOptions$1,findMatchingParen,findOriginalTarget,flush$1 as flush,flush$1,flush as flush$2,flushDebouncers,forEachRule,gatherStyleText,gestures,get,getBuildComment,getComputedStyleValue,getCssBuild,getIsExtends,hideElementsGlobally,html$1 as html,html as html$1,html as html$2,html as html$3,html$1 as html$4,html$1 as html$5,htmlLiteral,idlePeriod,incrementInstanceCount,insertNodeIntoTemplate,installMediaQueryWatcher,installOfflineWatcher,installRouter,instanceCount,invalidate,invalidateTemplate,isAncestor,isCEPolyfill,isDeep,isDescendant,isDirective,isDirective as isDirective$1,isIterable,isIterable as isIterable$1,isKeyframesSelector,isOptimalCssBuild,isPath,isPrimitive,isPrimitive as isPrimitive$1,isTargetedBuild,isTemplatePartActive,isTemplatePartActive as isTemplatePartActive$1,isUnscopedStyle,isValid,isValidating,lastAttributeNameRegex,lazyReducerEnhancer,legacyOptimizations,marker,markerRegex,matches,matchesSelector,menuIcon,microTask,minusIcon,mixinBehaviors,modelForElement,nativeCssVariables,nativeShadow,navigate,noChange,noChange as noChange$1,nodeMarker,normalize,notEqual,notEqual as notEqual$1,nothing,nothing as nothing$1,parse,parts$1 as parts,parts$1,passiveTouchGestures,pathFromUrl,plusIcon,prevent,processUnscopedStyle,processVariableAndFallback,property,property as property$1,query,query as query$1,queryAll,queryAll as queryAll$1,queryAllRoot,recognizers,register$1 as register,register as register$1,registerEffect,registrations,remove,removeCustomPropAssignment,removeFromCartIcon,removeListener,removeNodes,removeNodes as removeNodes$1,removeNodesFromTemplate,render,render$2 as render$1,render as render$2,reparentNodes,reparentNodes as reparentNodes$1,resetMouseCanceller,resolveCss,resolveUrl,root,rootPath,rulesForStyle,sanitizeDOMValue,scopeSubtree,scopingAttribute,scroll,scrollTimingFunction,set,setAllowTemplateFromDomModule,setCancelSyntheticClickEvents,setElementClassRaw,setLegacyOptimizations,setMetaTag,setPassiveTouchGestures,setRootPath,setSanitizeDOMValue,setStrictTemplatePolicy,setSyncInitialRender,setTouchAction,showSnackbar,split,splitSelectorList,startValidating,startValidatingTemplate,store,strictTemplatePolicy,stringify,stylesFromModule,stylesFromModuleImports,stylesFromModules,stylesFromTemplate,supportsAdoptingStyleSheets,supportsAdoptingStyleSheets as supportsAdoptingStyleSheets$1,svg,svg as svg$1,svg as svg$2,syncInitialRender,templateCaches,templateCaches as templateCaches$1,templateFactory,templateFactory as templateFactory$1,templateIsValid,templateIsValidating,templatize,timeOut,toCssText,translate,types,unsafeCSS,unsafeCSS as unsafeCSS$1,updateDrawerState,updateMetadata,updateNativeProperties,updateOffline,updateStyles,useNativeCSSProperties,useNativeCustomElements,useShadow,version,version as version$1,wrap$1 as wrap,wrap as wrap$1};
+`;var sharedStyles={SharedStyles:SharedStyles};export{app as $app,app$2 as $app$1,app$1 as $appDefault,appLayoutBehavior as $appLayoutBehavior,appScrollEffectsBehavior as $appScrollEffectsBehavior,applyShim as $applyShim$1,ApplyShim as $applyShimDefault,applyShimUtils as $applyShimUtils,arraySelector as $arraySelector,arraySplice as $arraySplice,async as $async,buttonSharedStyles as $buttonSharedStyles,caseMap$1 as $caseMap,_class as $class,commonRegex as $commonRegex,commonUtils as $commonUtils,connectMixin as $connectMixin,cssParse as $cssParse,cssTag as $cssTag,customStyle as $customStyle,customStyleInterface as $customStyleInterface$1,CustomStyleInterface as $customStyleInterfaceDefault,debounce as $debounce,decorators as $decorators,defaultTemplateProcessor$1 as $defaultTemplateProcessor,dirMixin as $dirMixin,directive$1 as $directive,documentWait$1 as $documentWait,documentWait as $documentWaitDefault,dom$1 as $dom,domBind as $domBind,domIf as $domIf,domModule as $domModule,domRepeat as $domRepeat,elementMixin as $elementMixin,flattenedNodesObserver as $flattenedNodesObserver,flush$2 as $flush,gestureEventListeners as $gestureEventListeners,gestures$1 as $gestures,helpers as $helpers,hideTemplateControls as $hideTemplateControls,htmlTag as $htmlTag,index as $index,index$1 as $index$1,thunk as $indexDefault,result as $indexDefault$1,ironResizableBehavior as $ironResizableBehavior,ironScrollTargetBehavior as $ironScrollTargetBehavior,lazyReducerEnhancer$1 as $lazyReducerEnhancer,legacyElementMixin as $legacyElementMixin,litElement as $litElement,litHtml as $litHtml,mediaQuery as $mediaQuery,metadata as $metadata,mixin as $mixin,modifyTemplate as $modifyTemplate,mutableData as $mutableData,mutableDataBehavior as $mutableDataBehavior,myIcons as $myIcons,network as $network,pageViewElement as $pageViewElement,part as $part,parts as $parts,path as $path,polymer_dom as $polymerDom,polymerElement as $polymerElement,polymerFn as $polymerFn,polymerLegacy as $polymerLegacy,ponyfill as $ponyfill,symbolObservablePonyfill as $ponyfillDefault,propertiesChanged as $propertiesChanged,propertiesMixin as $propertiesMixin,propertyAccessors as $propertyAccessors,propertyEffects as $propertyEffects,redux as $redux,render$1 as $render,renderStatus as $renderStatus,resolveUrl$1 as $resolveUrl,router as $router,scopeSubtree$1 as $scopeSubtree,settings as $settings,shadyRender as $shadyRender,sharedStyles as $sharedStyles,store$1 as $store,styleGather as $styleGather,styleSettings as $styleSettings,styleUtil as $styleUtil,telemetry as $telemetry,template$1 as $template,templateFactory$1 as $templateFactory,templateInstance as $templateInstance,templateMap$1 as $templateMap,templateMap as $templateMapDefault,templateResult as $templateResult,templateStamp as $templateStamp,templatize$1 as $templatize,templatizerBehavior as $templatizerBehavior,unscopedStyleHandler as $unscopedStyleHandler,updatingElement as $updatingElement,wrap$2 as $wrap,ANIMATION_MATCH,AppLayoutBehavior,AppScrollEffectsBehavior,ArraySelector,ArraySelectorMixin,AttributeCommitter,AttributeCommitter as AttributeCommitter$1,AttributePart,AttributePart as AttributePart$1,BRACKETED,Base,BooleanAttributePart,BooleanAttributePart as BooleanAttributePart$1,ButtonSharedStyles,CLOSE_SNACKBAR,CSSResult,CSSResult as CSSResult$1,Class,CustomStyle,CustomStyleInterfaceInterface,CustomStyleProvider,Debouncer,DefaultTemplateProcessor,DefaultTemplateProcessor as DefaultTemplateProcessor$1,DirMixin,DomApi,DomBind,DomIf,DomModule,DomRepeat,ElementMixin,ElementWithBackground,EventApi,EventPart,EventPart as EventPart$1,FlattenedNodesObserver,GestureEventListeners,HOST_PREFIX,HOST_SUFFIX,IS_VAR,IronResizableBehavior,IronScrollTargetBehavior,LegacyElementMixin,LitElement,MEDIA_MATCH,MIXIN_MATCH,MutableData,MutableDataBehavior,NodePart,NodePart as NodePart$1,OPEN_SNACKBAR,OptionalMutableData,OptionalMutableDataBehavior,PageViewElement,Polymer,Polymer as Polymer$1,PolymerElement,PropertiesChanged,PropertiesMixin,PropertyAccessors,PropertyCommitter,PropertyCommitter as PropertyCommitter$1,PropertyEffects,PropertyPart,PropertyPart as PropertyPart$1,SVGTemplateResult,SVGTemplateResult as SVGTemplateResult$1,SVGTemplateResult as SVGTemplateResult$2,SharedStyles,StyleNode,Template,Template as Template$1,TemplateInstance,TemplateInstance as TemplateInstance$1,TemplateInstanceBase,TemplateResult,TemplateResult as TemplateResult$1,TemplateResult as TemplateResult$2,TemplateResult as TemplateResult$3,TemplateStamp,Templatizer,UPDATE_DRAWER_STATE,UPDATE_OFFLINE,UPDATE_PAGE,UpdatingElement,UpdatingElement as UpdatingElement$1,VAR_ASSIGN,VAR_CONSUMED,ActionTypes as __DO_NOT_USE__ActionTypes,_scrollEffects,_scrollTimer,add,enqueueDebouncer as addDebouncer,addListener,addToCartIcon,afterNextRender,allowTemplateFromDomModule,animationFrame,applyCss,applyMiddleware,applyStyle,applyStylePlaceHolder,beforeNextRender,bindActionCreators,boundAttributeSuffix,calculateSplices,camelToDashCase,cancelSyntheticClickEvents,combineReducers,compose,connect,createMarker,createMarker as createMarker$1,createScopeStyle,createStore,css,css as css$1,cssBuild,cssFromModule,cssFromModuleImports,cssFromModules,cssFromTemplate,customElement,customElement as customElement$1,dashToCamelCase,dedupingMixin,deepTargetFind,defaultConverter,defaultConverter as defaultConverter$1,defaultTemplateProcessor,defaultTemplateProcessor as defaultTemplateProcessor$1,detectMixin,directive,directive as directive$1,disableRuntime,dom,dumpRegistrations,elementHasBuiltCss,elementsAreInvalid,enqueueDebouncer,enqueueDebouncer as enqueueDebouncer$1,eventOptions,eventOptions as eventOptions$1,findMatchingParen,findOriginalTarget,flush$1 as flush,flush$1,flush as flush$2,flushDebouncers,forEachRule,gatherStyleText,gestures,get,getBuildComment,getComputedStyleValue,getCssBuild,getIsExtends,hideElementsGlobally,html,html as html$1,html$1 as html$2,html as html$3,html$1 as html$4,html$1 as html$5,htmlLiteral,idlePeriod,incrementInstanceCount,insertNodeIntoTemplate,installMediaQueryWatcher,installOfflineWatcher,installRouter,instanceCount,invalidate,invalidateTemplate,isAncestor,isCEPolyfill,isDeep,isDescendant,isDirective,isDirective as isDirective$1,isIterable,isIterable as isIterable$1,isKeyframesSelector,isOptimalCssBuild,isPath,isPrimitive,isPrimitive as isPrimitive$1,isTargetedBuild,isTemplatePartActive,isTemplatePartActive as isTemplatePartActive$1,isUnscopedStyle,isValid,isValidating,lastAttributeNameRegex,lazyReducerEnhancer,legacyOptimizations,marker,markerRegex,matches,matchesSelector,menuIcon,microTask,minusIcon,mixinBehaviors,modelForElement,nativeCssVariables,nativeShadow,navigate,noChange,noChange as noChange$1,nodeMarker,normalize,notEqual,notEqual as notEqual$1,nothing,nothing as nothing$1,parse,parts$1 as parts,parts$1,passiveTouchGestures,pathFromUrl,plusIcon,prevent,processUnscopedStyle,processVariableAndFallback,property,property as property$1,query,query as query$1,queryAll,queryAll as queryAll$1,queryAllRoot,recognizers,register$1 as register,register as register$1,registerEffect,registrations,remove,removeCustomPropAssignment,removeFromCartIcon,removeListener,removeNodes,removeNodes as removeNodes$1,removeNodesFromTemplate,render,render$2 as render$1,render as render$2,reparentNodes,reparentNodes as reparentNodes$1,resetMouseCanceller,resolveCss,resolveUrl,root,rootPath,rulesForStyle,sanitizeDOMValue,scopeSubtree,scopingAttribute,scroll,scrollTimingFunction,set,setAllowTemplateFromDomModule,setCancelSyntheticClickEvents,setElementClassRaw,setLegacyOptimizations,setMetaTag,setPassiveTouchGestures,setRootPath,setSanitizeDOMValue,setStrictTemplatePolicy,setSyncInitialRender,setTouchAction,showSnackbar,split,splitSelectorList,startValidating,startValidatingTemplate,store,strictTemplatePolicy,stringify,stylesFromModule,stylesFromModuleImports,stylesFromModules,stylesFromTemplate,supportsAdoptingStyleSheets,supportsAdoptingStyleSheets as supportsAdoptingStyleSheets$1,svg,svg as svg$1,svg as svg$2,syncInitialRender,templateCaches,templateCaches as templateCaches$1,templateFactory,templateFactory as templateFactory$1,templateIsValid,templateIsValidating,templatize,timeOut,toCssText,translate,types,unsafeCSS,unsafeCSS as unsafeCSS$1,updateDrawerState,updateMetadata,updateNativeProperties,updateOffline,updateStyles,useNativeCSSProperties,useNativeCustomElements,useShadow,version,version as version$1,wrap$1 as wrap,wrap as wrap$1};
